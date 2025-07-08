@@ -4,102 +4,104 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Booking - Queens Garden Hotel</title>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="container">
-      <h1 class="logo">Queens Garden</h1>
-  
 
-    <!-- Mobile Toggle -->
-    <div class="menu-toggle" id="menuToggle" aria-label="Menu Toggle">
-      <!-- Hamburger Icon -->
-      <svg id="iconHamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
-        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-      <!-- Close Icon -->
-      <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
-        <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </div>
+  <!-- Sidebar Toggle Button -->
+  <button id="menuToggle" class="menu-toggle" aria-label="Open Menu">
+    <i id="iconHamburger" class="fas fa-bars"></i>
+    <i id="iconClose" class="fas fa-xmark" style="display: none;"></i>
+  </button>
 
-    <!-- Navigation Links -->
-    <nav>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="rooms.html">Rooms</a></li>
-        <li><a href="booking.html" class="active">Booking</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="restaurant.html">Restaurant</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <div class="layout">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <h2 class="logo"><i class="fas fa-hotel"></i> Queens Garden</h2>
+
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="rooms.html"><i class="fas fa-bed"></i> Rooms</a></li>
+        <li><a href="booking.html" class="active"><i class="fas fa-calendar-check"></i> Booking</a></li>
+        <li><a href="events.html"><i class="fas fa-champagne-glasses"></i> Events</a></li>
+        <li><a href="restaurant.html"><i class="fas fa-utensils"></i> Restaurant</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
       </ul>
-    </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Booking Form Section -->
+      <section class="booking-section">
+        <div class="container">
+          <h2 class="section-title">Book Your Stay</h2>
+
+          <form id="bookingForm" class="booking-form">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+
+            <div class="form-group">
+              <label for="roomType">Room Type *</label>
+              <select id="roomType" name="roomType" required>
+                <option value="">-- Select Room --</option>
+                <option value="Deluxe Room">Deluxe Room</option>
+                <option value="Superior Room">Superior Room</option>
+                <option value="Executive Suite">Executive Suite</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="checkin">Check-in Date *</label>
+              <input type="date" id="checkin" name="checkin" required />
+            </div>
+
+            <div class="form-group">
+              <label for="checkout">Check-out Date *</label>
+              <input type="date" id="checkout" name="checkout" required />
+            </div>
+
+            <div class="form-group">
+              <label for="guests">Number of Guests *</label>
+              <input type="number" id="guests" name="guests" min="1" max="10" required />
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn">Submit Booking</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2025 Queens Garden Hotel - Eldoret, Kenya</p>
+        </div>
+      </footer>
+
+    </main>
   </div>
-</header>
 
-
-
-  <!-- Booking Form -->
-  <section class="booking-section">
-    <div class="container">
-      <h2 class="section-title">Book Your Stay</h2>
-      <form id="bookingForm" class="booking-form">
-        <div class="form-group">
-          <label for="fullName">Full Name *</label>
-          <input type="text" id="fullName" name="fullName" required />
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Phone Number *</label>
-          <input type="tel" id="phone" name="phone" required />
-        </div>
-
-        <div class="form-group">
-          <label for="roomType">Room Type *</label>
-          <select id="roomType" name="roomType" required>
-            <option value="">-- Select Room --</option>
-            <option value="Deluxe Room">Deluxe Room</option>
-            <option value="Superior Room">Superior Room</option>
-            <option value="Executive Suite">Executive Suite</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="checkin">Check-in Date *</label>
-          <input type="date" id="checkin" name="checkin" required />
-        </div>
-
-        <div class="form-group">
-          <label for="checkout">Check-out Date *</label>
-          <input type="date" id="checkout" name="checkout" required />
-        </div>
-
-        <div class="form-group">
-          <label for="guests">Number of Guests *</label>
-          <input type="number" id="guests" name="guests" min="1" max="10" required />
-        </div>
-
-        <div class="form-group">
-          <button type="submit" class="btn">Submit Booking</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Queens Garden Hotel - Eldoret, Kenya</p>
-    </div>
-  </footer>
-
+  <!-- JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>

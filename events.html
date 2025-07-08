@@ -4,76 +4,80 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Events & Garden - Queens Garden Hotel</title>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="container">
-      <h1 class="logo">Queens Garden</h1>
 
-    <!-- Mobile Toggle -->
-    <div class="menu-toggle" id="menuToggle" aria-label="Menu Toggle">
-      <!-- Hamburger Icon -->
-      <svg id="iconHamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
-        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-      <!-- Close Icon -->
-      <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
-        <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </div>
+  <!-- Sidebar Toggle Button -->
+  <button id="menuToggle" class="menu-toggle" aria-label="Open Menu">
+    <i id="iconHamburger" class="fas fa-bars"></i>
+    <i id="iconClose" class="fas fa-xmark" style="display: none;"></i>
+  </button>
 
-    <!-- Navigation Links -->
-    <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="rooms.html">Rooms</a></li>
-          <li><a href="booking.html">Booking</a></li>
-          <li><a href="events.html" class="active">Events</a></li>
-          <li><a href="restaurant.html">Restaurant</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="layout">
 
-  <!-- Event Info Section -->
-  <section class="events-section">
-    <div class="container">
-      <h2 class="section-title">Host Your Dream Event</h2>
-      <p class="section-subtitle">Perfect for weddings, birthdays, corporate meetings and garden events.</p>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <h2 class="logo"><i class="fas fa-hotel"></i> Queens Garden</h2>
 
-      <div class="event-features">
-        <div class="event-card">
-          <img src="assets/images/event-garden.jpg" alt="Garden Event Space" loading="lazy" />
-          <h3>Garden Setup</h3>
-          <p>Spacious outdoor garden perfect for wedding receptions and private celebrations.</p>
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="rooms.html"><i class="fas fa-bed"></i> Rooms</a></li>
+        <li><a href="booking.html"><i class="fas fa-calendar-check"></i> Booking</a></li>
+        <li><a href="events.html" class="active"><i class="fas fa-champagne-glasses"></i> Events</a></li>
+        <li><a href="restaurant.html"><i class="fas fa-utensils"></i> Restaurant</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Event Info Section -->
+      <section class="events-section">
+        <div class="container">
+          <h2 class="section-title">Host Your Dream Event</h2>
+          <p class="section-subtitle">Perfect for weddings, birthdays, corporate meetings and garden events.</p>
+
+          <div class="event-features">
+            <div class="event-card">
+              <img src="assets/images/event-garden.jpg" alt="Garden Event Space" loading="lazy" />
+              <h3>Garden Setup</h3>
+              <p>Spacious outdoor garden perfect for wedding receptions and private celebrations.</p>
+            </div>
+
+            <div class="event-card">
+              <img src="assets/images/event-conference.jpg" alt="Conference Hall" loading="lazy" />
+              <h3>Conference Hall</h3>
+              <p>Fully equipped indoor hall for corporate meetings, workshops, and business events.</p>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="event-cta">
+            <h3>Ready to Book an Event?</h3>
+            <p>Tell us your date and event type. We'll handle the magic.</p>
+            <a href="booking.html" class="btn">Book Now</a>
+          </div>
         </div>
+      </section>
 
-        <div class="event-card">
-          <img src="assets/images/event-conference.jpg" alt="Conference Hall" loading="lazy" />
-          <h3>Conference Hall</h3>
-          <p>Fully equipped indoor hall for corporate meetings, workshops, and business events.</p>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2025 Queens Garden Hotel - Eldoret, Kenya</p>
         </div>
-      </div>
+      </footer>
 
-      <!-- CTA -->
-      <div class="event-cta">
-        <h3>Ready to Book an Event?</h3>
-        <p>Tell us your date and event type. We'll handle the magic.</p>
-        <a href="booking.html" class="btn">Book Now</a>
-      </div>
-    </div>
-  </section>
+    </main>
+  </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Queens Garden Hotel - Eldoret, Kenya</p>
-    </div>
-  </footer>
-  
+  <!-- JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>

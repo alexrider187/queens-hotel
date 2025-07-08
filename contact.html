@@ -4,93 +4,96 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Queens Garden Hotel</title>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="container">
-      <h1 class="logo">Queens Garden</h1>
 
+  <!-- Sidebar Toggle Button -->
+  <button id="menuToggle" class="menu-toggle" aria-label="Open Menu">
+    <i id="iconHamburger" class="fas fa-bars"></i>
+    <i id="iconClose" class="fas fa-xmark" style="display: none;"></i>
+  </button>
 
-    <!-- Mobile Toggle -->
-    <div class="menu-toggle" id="menuToggle" aria-label="Menu Toggle">
-      <!-- Hamburger Icon -->
-      <svg id="iconHamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
-        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-      <!-- Close Icon -->
-      <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
-        <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </div>
+  <div class="layout">
 
-    <!-- Navigation Links -->
- 
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <h2 class="logo"><i class="fas fa-hotel"></i> Queens Garden</h2>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="rooms.html">Rooms</a></li>
-          <li><a href="booking.html">Booking</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="restaurant.html">Restaurant</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="rooms.html"><i class="fas fa-bed"></i> Rooms</a></li>
+        <li><a href="booking.html"><i class="fas fa-calendar-check"></i> Booking</a></li>
+        <li><a href="events.html"><i class="fas fa-champagne-glasses"></i> Events</a></li>
+        <li><a href="restaurant.html"><i class="fas fa-utensils"></i> Restaurant</a></li>
+        <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </aside>
 
-  <!-- Contact Section -->
-  <section class="contact-section">
-    <div class="container">
-      <h2 class="section-title">Contact Us</h2>
-      <div class="contact-grid">
-        <!-- Contact Info -->
-        <div class="contact-info">
-          <h3>Queens Garden Hotel, Eldoret</h3>
-          <p><strong>Address:</strong> Nairobi Rd, Eldoret, Kenya</p>
-          <p><strong>Phone:</strong> +254 712 345 678</p>
-          <p><strong>Email:</strong> info@queensgarden.co.ke</p>
-          <p><strong>Opening Hours:</strong><br>Mon-Sun: 7am - 10pm</p>
-          <a href="https://wa.me/254712345678" class="btn small" target="_blank">Chat on WhatsApp</a>
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Contact Section -->
+      <section class="contact-section">
+        <div class="container">
+          <h2 class="section-title">Contact Us</h2>
+          <div class="contact-grid">
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+              <h3>Queens Garden Hotel, Eldoret</h3>
+              <p><strong>Address:</strong> Nairobi Rd, Eldoret, Kenya</p>
+              <p><strong>Phone:</strong> +254 712 345 678</p>
+              <p><strong>Email:</strong> info@queensgarden.co.ke</p>
+              <p><strong>Opening Hours:</strong><br>Mon-Sun: 7am - 10pm</p>
+              <a href="https://wa.me/254712345678" class="btn small" target="_blank">Chat on WhatsApp</a>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email *</label>
+                <input type="email" id="email" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" rows="5" required></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn">Send Message</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Embedded Google Map -->
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps?q=Queens%20Garden%20Hotel%20Eldoret&output=embed"
+              width="100%" height="350" style="border:0;" allowfullscreen loading="lazy"></iframe>
+          </div>
         </div>
+      </section>
 
-        <!-- Contact Form -->
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <label for="name">Your Name *</label>
-            <input type="text" id="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Your Email *</label>
-            <input type="email" id="email" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea id="message" rows="5" required></textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn">Send Message</button>
-          </div>
-        </form>
-      </div>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2025 Queens Garden Hotel - Eldoret, Kenya</p>
+        </div>
+      </footer>
 
-      <!-- Embedded Google Map -->
-      <div class="map-wrapper">
-        <iframe
-          src="https://www.google.com/maps?q=Queens%20Garden%20Hotel%20Eldoret&output=embed"
-          width="100%" height="350" style="border:0;" allowfullscreen loading="lazy"></iframe>
-    </div>
-  </section>
+    </main>
+  </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Queens Garden Hotel - Eldoret, Kenya</p>
-    </div>
-  </footer>
-
+  <!-- JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>
